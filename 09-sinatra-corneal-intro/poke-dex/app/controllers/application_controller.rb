@@ -20,6 +20,7 @@ class ApplicationController < Sinatra::Base
 
   # SHOW Action
   get '/pokemons/:id' do
+    
     @pokemon = Pokemon.find(params[:id])
 
     erb :show
