@@ -1,11 +1,13 @@
 <h1>"INDEX" PAGE</h1>
 
 <div class="index-container">
+
   <% @pokemons.each do |pokemon| %>
     <div class="index-tile">
       <p> Name: <%= pokemon.name  %> </p>
       <p> Ability: <%= pokemon.ability  %> </p>
       <img src="<%= pokemon.img_url %>" alt="<%= pokemon.name%>">
-    </div>
+    </div>   
   <% end %>
+  
 </div>

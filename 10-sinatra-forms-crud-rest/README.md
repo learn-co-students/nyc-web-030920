@@ -6,7 +6,7 @@
 - Explain REST
 - Demonstrate how REST is used with CRUD
 - Configure forms to work with HTTP verbs other than GET and POST
-- Know how to write the following HTML tags: <a>, <form>, <input>,
+- Know how to write the following HTML tags: `<a>, <form>, <input>`
 - Use nested params to isolate params coming from form fields
 - Understand the difference between rendering and redirecting, and when to   use one strategy or the other
 - Render a delete button
@@ -31,9 +31,9 @@
 - [ ] Create
   - [ ] GET '/doctors/new' -> Show the user a form to create a new doctor
   - [ ] POST '/doctors' -> Create a new doctor in our database
-- [ ] Read
-  - [ ] GET '/doctors' -> Show all doctors
-  - [ ] GET '/doctors/:id' -> Show one doctor
+- [X] Read
+  - [X] GET '/doctors' -> Show all doctors
+  - [X] GET '/doctors/:id' -> Show one doctor
 - [ ] Update
   - [ ] GET '/doctors/:id/edit' -> Show the user a form to edit an existing doctor doctor
   - [ ] PATCH '/doctors/:id' -> Update the doctor in our database
