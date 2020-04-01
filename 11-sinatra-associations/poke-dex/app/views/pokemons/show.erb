@@ -1,0 +1,21 @@
+<h1>"SHOW" PAGE</h1>
+
+<div class="show-page">
+  <h3><%= @pokemon.name %></h3>
+  <p><%= @pokemon.ability %></p>
+
+  <marquee direction="right" scrollamount="15"> 
+    <img class="show-img" src="<%= @pokemon.img_url %>" alt="pokemon">
+  </marquee>
+</div>
+
+<h2>All of My Trainers</h2>
+<% @pokemon.trainers.each do |trainer| %>
+  <p><%= trainer.name %></p>
+<% end %>
+
+
+<form action="/pokemons/<%= @pokemon.id %>" method='POST'>
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="DELETE!!!">
+</form>

@@ -1,0 +1,12 @@
+<form action="/trainers" method="POST">
+  <input type="text" name="name" placeholder="Trainer Name">
+  <input type="text" name="years" placeholder="Years of Experience">
+
+  <select name="pokemon_id" >
+    <% Pokemon.all.each do |pokemon| %>
+      <option value="<%= pokemon.id %>"><%= pokemon.name%></option>
+    <% end %>
+  </select>
+
+  <input type="submit" value="Create New Trainer">
+</form>
