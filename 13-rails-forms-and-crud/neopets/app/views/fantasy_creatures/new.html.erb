@@ -1,0 +1,24 @@
+<h1>Create Creature</h1>
+
+<%= form_for @fantasy_creature do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :strength %>
+    <%= f.number_field :strength %>
+
+    <%= f.label :environment %>
+    <%= f.text_field :environment %>
+
+    <%= f.label :finishing_move %>
+    <%= f.text_field :finishing_move %>
+
+    <%= f.label :img_url %>
+    <%= f.text_area :img_url %>
+
+    <%= f.submit %>
+<% end %>
+
+
+<%# <form action="/fantasy_creatures" method="POSY">
+</form> %>

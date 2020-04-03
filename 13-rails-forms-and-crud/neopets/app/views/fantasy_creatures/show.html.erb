@@ -1,0 +1,10 @@
+<h1>Fantasy Creature Show Page</h1>
+
+<h2>NAME: <%= @fantasy_creature.name %></h2>
+<p><b>STRENGTH:</b><%= @fantasy_creature.strength %></p>
+<p><b>FINISHING MOOVE: </b><%= @fantasy_creature.finishing_move %></p>
+<img src="<%= @fantasy_creature.img_url %>" alt="creature">
+<p><b>ENVIRNMENT</b>: <%= @fantasy_creature.environment %></p>
+
+
+<%= button_to "DELETE CREATURE", fantasy_creature_path(@fantasy_creature), method: :delete%>
