@@ -1,0 +1,2 @@
+class FantasyCreature < ApplicationRecord
+end
