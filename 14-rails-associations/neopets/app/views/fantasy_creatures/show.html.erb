@@ -9,4 +9,13 @@
   <hr>
   <%= link_to "Edit This Creature", edit_fantasy_creature_path(@fantasy_creature)  %>
   <%= button_to "DELETE CREATURE", fantasy_creature_path(@fantasy_creature), method: :delete%>
+
+
+  <h2>Humans Who Have Oppinions About Me</h2>
+
+  <% @fantasy_creature.users.each do |user| %>
+    <p><%# link_to user.name, user_path(user) %></p>
+    <p><%= link_to user.name, user %></p>
+  <% end %>
+
 </div>

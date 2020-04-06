@@ -1,4 +1,6 @@
 class FantasyCreaturesController < ApplicationController
+  before_action :find_creature, only: [:show, :update, :edit, :destroy] 
+
   def index 
     @fantasy_creatures = FantasyCreature.all
 
@@ -6,7 +8,7 @@ class FantasyCreaturesController < ApplicationController
   end
 
   def show 
-    @fantasy_creature = FantasyCreature.find(params[:id])
+    # @fantasy_creature = FantasyCreature.find(params[:id])
     # render :show
   end 
 
@@ -24,21 +26,21 @@ class FantasyCreaturesController < ApplicationController
   end 
 
   def edit 
-    @fantasy_creature = FantasyCreature.find(params[:id])
+    # @fantasy_creature = FantasyCreature.find(params[:id])
     # render :edit
   end
   
   def update 
-    fantasy_creature = FantasyCreature.find(params[:id])
+    # @fantasy_creature = FantasyCreature.find(params[:id])
     fantasy_creature.update(fanatasy_creature_params)
     
-    redirect_to fantasy_creature
+    redirect_to @fantasy_creature
   end
   
   
   def destroy 
-    fantasy_creature = FantasyCreature.find(params[:id])
-    fantasy_creature.destroy
+    # @fantasy_creature = FantasyCreature.find(params[:id])
+    @fantasy_creature.destroy
 
     redirect_to fantasy_creatures_path
   end 
@@ -49,4 +51,8 @@ class FantasyCreaturesController < ApplicationController
   def fanatasy_creature_params
     params.require(:fantasy_creature).permit(:name, :finishing_move, :strength, :img_url, :environment)
   end
+
+  def find_creature
+    @fantasy_creature = FantasyCreature.find(params[:id])
+  end 
 end

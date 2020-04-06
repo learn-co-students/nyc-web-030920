@@ -7,7 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 FantasyCreature.destroy_all
-# User.destroy_all
+User.destroy_all
+Post.destroy_all
 
 creatures = [
   {name: "Dragon", img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/e/e0/Dragons_S8_Ep_1.jpg/revision/latest?cb=20190415031732", finishing_move: "", environment: "" , strength: rand(1..10)},
@@ -27,7 +28,7 @@ creatures = [
   {name: "Cyclops", img_url: "https://cranstononline.com/uploads/original/1333482116_165d.jpg", finishing_move: "", environment: "" , strength: rand(1..10)}
 ]
 
-peeps = [
+humans = [
   {name: "Alex Silver", img_url: "https://ca.slack-edge.com/T02MD9XTF-UV3B4DGHM-c9f0fa880a8e-512"},
   {name: "Alex Sterrantino", img_url: "https://ca.slack-edge.com/T02MD9XTF-UTSQAJC48-bd9ebbe240cd-512"},
   {name: "Alexander Schelchere", img_url: "https://ca.slack-edge.com/T02MD9XTF-UK8BFUYUW-a03c9cbb43c8-512"},
@@ -64,7 +65,13 @@ creatures.each do |creature|
   FantasyCreature.create(creature)
 end 
 
-# puts ".... Seeding Humans"
-# humans.each do |human| 
-#   User.create(human)
-# end  
+puts ".... Seeding Humans"
+humans.each do |human| 
+  User.create(human)
+end  
+
+puts "... Creating Relationships"
+
+50.times do 
+  Post.create(user_id: User.all.sample.id, fantasy_creature: FantasyCreature.all.sample, content: Faker::Movies::BackToTheFuture.quote, rating: rand(1..10))
+end 

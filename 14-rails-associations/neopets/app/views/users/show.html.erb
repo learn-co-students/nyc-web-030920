@@ -1,0 +1,19 @@
+<h1>User Show Page</h1>
+
+<div class="show-body">
+  <h2>NAME: <%= @user.name %></h2>
+  <img class="show-img" src="<%= @user.img_url %>" alt="user">
+  <hr>
+
+<h2>My Sweet Posts</h2>
+  <% @user.posts.each do |post| %>
+    <%= "#{post.fantasy_creature.name} | #{post.rating}" %>
+    <p><%= post.content%></p>
+    <hr>
+  <% end  %>
+
+</div>
+
+
+<%# Creature name %>
+<%# see all posts + content  %>

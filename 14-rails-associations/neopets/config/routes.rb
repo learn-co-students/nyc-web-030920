@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  resources :posts, only: [:new, :create]
+  resources :users, only: [:index, :show]
+  resources :fantasy_creatures 
+
+
+
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :fantasy_creatures #, only: [:index, :show, :new, :create, :edit, :update, :delete]
 
 
   # get "/fantasy_creatures", to: "fantasy_creatures#index", as: "fantasy_creatures"
