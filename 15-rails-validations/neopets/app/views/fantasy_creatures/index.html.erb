@@ -1,0 +1,12 @@
+<h1>Fantasy Creatures</h1>
+
+<div class="index-container">
+
+  <% @fantasy_creatures.each do |creature| %>
+    <div class="index-tile">
+      <h2><%= link_to creature.name, fantasy_creature_path(creature) %></h2>
+      <img class="index-img" src="<%= creature.img_url %>" alt="creature">
+      <%= button_to "DELETE CREATURE", fantasy_creature_path(creature), method: :delete%>
+    </div>
+  <% end %>
+</div>
