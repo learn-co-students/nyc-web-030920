@@ -1,0 +1,14 @@
+<h1>Users Creatures</h1>
+
+<% if flash[:error] %>
+  <h1><%= flash[:error] %></h1>
+<% end %>
+
+<div class="index-container">
+  <% @users.each do |user| %>
+    <div class="index-tile">
+      <h2><%= link_to user.name, user_path(user) %></h2>
+      <img class="index-img" src="<%= user.img_url %>" alt="user">
+    </div>
+  <% end %>
+</div>

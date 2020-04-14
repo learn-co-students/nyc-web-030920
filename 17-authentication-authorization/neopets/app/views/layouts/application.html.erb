@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Neopets</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+     <ul>
+        <li><%= link_to 'User Home', users_path %></li>
+        <li><%= link_to 'Creature Home', fantasy_creatures_path %></li>
+        <li><%= link_to 'New Creature', new_fantasy_creature_path %></li>
+        <% if @current_user %>
+          <li class='right'><%= @current_user.name %></li>
+          <li class='right'><%= link_to "Log Out", sessions_path, method: :delete %></li>
+        <% else %>
+          <li class='right'><%= link_to 'Sign-up', new_user_path %></li>
+          <li class='right'><%= link_to 'Sign-in', login_path %></li>
+        <% end %>
+      </ul>
+    <%= yield %>
+  </body>
+</html>

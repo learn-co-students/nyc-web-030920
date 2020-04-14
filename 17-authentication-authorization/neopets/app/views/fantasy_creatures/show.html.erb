@@ -1,0 +1,30 @@
+<h1>Fantasy Creature Show Page</h1>
+
+<h1>Page views left <%= session[:counter] %></h1>
+
+<% if session[:counter].to_i <= 0%> 
+  <h1>SHOW AD</h1>
+  <iframe width="966" height="543" src="https://www.youtube.com/embed/2Hqp2PuqDEw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<% else%>
+  <div class="show-body">
+    <h2>NAME: <%= @fantasy_creature.name %></h2>
+    <p><b>STRENGTH:</b><%= @fantasy_creature.strength %></p>
+    <p><b>FINISHING MOOVE: </b><%= @fantasy_creature.finishing_move %></p>
+    <p><b>ENVIRNMENT</b>: <%= @fantasy_creature.environment %></p>
+    <img class="show-img" src="<%= @fantasy_creature.img_url %>" alt="creature">
+    <hr>
+    <%= link_to "Edit This Creature", edit_fantasy_creature_path(@fantasy_creature)  %>
+    <%= button_to "DELETE CREATURE", fantasy_creature_path(@fantasy_creature), method: :delete%>
+    <%= button_to "Second Delete", {controller: :fantasy_creatures, action: 'destroy', id: @fantasy_creature.id}, method: :delete %>
+
+
+    <h2>Humans Who Have Oppinions About Me</h2>
+
+    <% @fantasy_creature.users.each do |user| %>
+      <p><%# link_to user.name, user_path(user) %></p>
+      <p><%= link_to user.name, user %></p>
+    <% end %>
+
+  </div>
+
+<% end %>
