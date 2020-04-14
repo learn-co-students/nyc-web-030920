@@ -1,0 +1,16 @@
+<%= form_for @post do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+
+  <%= f.label :user_id %>
+  <%= f.collection_select :user_id, User.all, :id, :name  %>
+
+  <%= f.label :fantasy_creature_id %>
+  <%= f.collection_select :fantasy_creature_id, FantasyCreature.all, :id, :name %>
+
+  <%= f.submit %>
+  
+<% end %>
