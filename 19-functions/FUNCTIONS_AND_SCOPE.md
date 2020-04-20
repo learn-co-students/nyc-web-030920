@@ -54,7 +54,7 @@ function myCar(carType){
   console.log(`I drive a fancy ass ${carType}!`)
 }
 
-carType('Tesla X')
+myCar('Tesla X')
 ```
 
 ```
@@ -84,7 +84,7 @@ function someFunction(){
   console.log(popStar)
 
   function otherFunction(){
-    popstar = "Dua Lipa"
+    popStar = "Dua Lipa"
     let diva = "Madonna"
 
     console.log(popStar)
@@ -191,22 +191,39 @@ var horse
 ```javascript
 let stringArray = ["JavaScript", "is pretty", "cool", "I guess."]
 
-// put answer here
+function logger(string){
+  console.log(string)
+}
+
+// let otherFunction = function(){...}
+
+stringArray.forEach(logger)
 ```
 
 20. Write a function that accepts a number (e.g. *x*) as a parameter and returns an inner function that accepts a different number (e.g. *y*) as a parameter and returns the product of it and the number from the outer function.
 
 ```javascript
+
+function multiplier(x){
+  return function(y){
+    return x * y
+  }
+}
 ```
 
 21. Using the function from above, create a function that accepts a number as a parameter and returns its double. 
 
 ```javascript
+
+let doubler = multiplier(2)
+
+doubler(4) // => 16
 ```
 
 22. If you successfully got the question above working, explain how you utilized closures to do so?
 
 ```
+doubler remembers that the "x" variable was when it was created and it carries a reference to its lexical scope with it
 ```
 
 23. What would get printed to the console in the example below?
