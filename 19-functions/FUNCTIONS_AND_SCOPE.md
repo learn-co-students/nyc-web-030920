@@ -27,33 +27,25 @@
 ```javascript
 ```
 
-6. Write a function called `logger` that accepts a string as a parameter and then passes that string to `console.log`. Use `logger` as a callback to console.log each element in the array below. 
-
-```javascript
-let stringArray = ["JavaScript", "is pretty", "cool", "I guess."]
-
-// put answer here
-```
-
-7. Write a function that accepts a number as a parameter and prints "❌ You're too young to enter the clurb! ❌" if the parameter 
+6. Write a function that accepts a number as a parameter and prints "❌ You're too young to enter the clurb! ❌" if the parameter 
 is less than 21 and "🤡 Welcome to the clurb! 🚀" if the parameter is 21 or over
 
 ```javascript
 ```
 
-8. Modify the above function to allow an underage patron in if they have a fake id
+7. Modify the above function to allow an underage patron in if they have a fake id
 
 ```javascript
 ```
 
 ### Scope in JavaScript
 
-9. What is lexical scope?
+8. What is lexical scope?
 
 ```
 ```
 
-10. What would be printed to the console in the example below? Why?
+9. What would be printed to the console in the example below? Why?
 
 ```javascript
 let carType = "Honda Civic"
@@ -68,7 +60,7 @@ carType('Tesla X')
 ```
 ```
 
-11. What would be printed to the console in the example below? Why?
+10. What would be printed to the console in the example below? Why?
 
 ```javascript
 let carType = "Honda Civic"
@@ -83,7 +75,7 @@ myCar('Tesla X')
 ```
 ```
 
-12. Write out what would be printed to the console, in order, if the script below were run in a browser. 
+11. Write out what would be printed to the console, in order, if the script below were run in a browser. 
 
 ```javascript
 let popStar = "Lady Gaga"
@@ -113,7 +105,7 @@ console.log(diva)
 ```
 ```
 
-13. What would be printed to the console in the example below? Why?
+12. What would be printed to the console in the example below? Why?
 
 ```javascript
 if(true){
@@ -129,12 +121,12 @@ console.log(`My dog's name is ${dogName}`)
 
 #### Hoisting
 
-14. In your own words, describe hoisting? What types of things are hoisted?
+13. In your own words, describe hoisting? What types of things are hoisted?
 
 ```
 ```
 
-15. If I had a JavaScript file with the following code, what would happen in each of the function calls below? Why?
+14. If I had a JavaScript file with the following code, what would happen in each of the function calls below? Why?
 
 ```javascript
 bark()
@@ -152,7 +144,7 @@ let meow = function(){
 ```
 ```
 
-16. What will the console.log print in each of the examples below? Why?
+15. What will the console.log print in each of the examples below? Why?
 
 ```javascript
 console.log(dogName)
@@ -169,7 +161,7 @@ const catName = "Houdini"
 ```
 ```
 
-17. What will the console.log print in the example below? Why?
+16. What will the console.log print in the example below? Why?
 
 ```javascript
 horse = "Benny"
@@ -180,19 +172,27 @@ var horse
 ```
 ```
 
-18. With regard to hoisting, what's the difference between `let`, `var`, and `const`
+17. With regard to hoisting, what's the difference between `let`, `var`, and `const`
 
 ```
 ```
 
 ### Variable declaration
 
-19. What are the differences between declaring variables using `let`, `var`, and `const`?
+18. What are the differences between declaring variables using `let`, `var`, and `const`?
 
 ```
 ```
 
 ### First Class Functions
+
+19. Write a function called `logger` that accepts a string as a parameter and then passes that string to `console.log`. Use `logger` as a callback to console.log each element in the array below. 
+
+```javascript
+let stringArray = ["JavaScript", "is pretty", "cool", "I guess."]
+
+// put answer here
+```
 
 20. Write a function that accepts a number (e.g. *x*) as a parameter and returns an inner function that accepts a different number (e.g. *y*) as a parameter and returns the product of it and the number from the outer function.
 
