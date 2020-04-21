@@ -76,20 +76,20 @@
 - READ:
 
 - `document.getElementById`
-
+  - get the div#movie-container
   
 - `node.getElementsByTagName`
-
+  - get the Matrix li 
 
 - `node.getElementsByClassName`
-
+  - get all the li.movie
 
 - `node.querySelector`
-
+  - get the first li
 
   
 - `node.querySelectorAll`
-
+  - get all the buttons
 
   - We can also combine selectors for more specificity:
     - We need a space between `#parent .child`
