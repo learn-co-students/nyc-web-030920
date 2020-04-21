@@ -1,5 +1,19 @@
 # Intro to the DOM 📜
 
+### Questions
+
+1. function syntax
+
+```javascript
+
+function someFunction(){
+  console.log('hi there')
+}
+
+someFunction
+
+```
+
 ## Three things that JS allows us to do:
 
 1. Account for user interaction
@@ -78,18 +92,43 @@
 - `document.getElementById`
   - get the div#movie-container
   
+  - returns the first element that has the id passed into the method
+  - only available on the document object
+  - `document.getElementById('movie-container')`
+
 - `node.getElementsByTagName`
-  - get the Matrix li 
+  - get the Matrix li element
+
+  - returns all elements in the scope of the node it is called on that satisfy the search criteria
+  
+  ```javascript
+  let matrix = document.getElementsByTagName("li")[1]
+
+  matrix.getElementsByTagName('h3')[0].textContent // => "The Matrix"
+  ```
 
 - `node.getElementsByClassName`
   - get all the li.movie
 
+  - `document.getElementsByClassName("movie")`
+
 - `node.querySelector`
-  - get the first li
+  - get the up-vote button from within the matrix li
+
+  - returns the first item to match the CSS selector syntax
+```javascript
+  let matrix = document.getElementsByTagName("li")[1]
+
+  matrix.querySelector(".up-vote")
+```
+
 
   
 - `node.querySelectorAll`
   - get all the button.up-vote
+
+  - `document.querySelectorAll(".up-vote")`
+  - `document.querySelectorAll("button")`
 
   - We can also combine selectors for more specificity:
     - We need a space between `#parent .child`
@@ -102,7 +141,8 @@
   - replace the welcome image with a different picture
 
 ```javascript
-
+let welcomeImage = document.getElementById("welcome-image")
+welcomeImage.src = "new url"
 ```
 
 ---
