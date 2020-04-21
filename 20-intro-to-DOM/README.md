@@ -89,7 +89,7 @@
 
   
 - `node.querySelectorAll`
-  - get all the buttons
+  - get all the button.up-vote
 
   - We can also combine selectors for more specificity:
     - We need a space between `#parent .child`
