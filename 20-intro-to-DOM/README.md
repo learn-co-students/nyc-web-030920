@@ -99,7 +99,7 @@
 ---
 
 - UPDATE:
-
+  - replace the welcome image with a different picture
 
 ```javascript
 
@@ -108,6 +108,7 @@
 ---
 
 - DELETE:
+  - remove the Jaws movie
 
 ```javascript
 
@@ -116,6 +117,7 @@
 ---
 
 - CREATE:
+  - add a new movie to the DOM
 
 ```javascript
 
