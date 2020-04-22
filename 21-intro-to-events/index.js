@@ -31,3 +31,29 @@ const movies = [
   }
 ]
 
+console.log('My favorite movies')
+
+// add What About Bob? to our movies list
+
+// √get the ul somehow
+// √build an li and other html for the movie
+// √attach it to the DOM in the ul
+
+const movieList = document.querySelector("ul")
+
+let bob = document.createElement("li")
+bob.className = "movie"
+
+bob.innerHTML = `
+  <h3>What About Bob?</h3>
+  <img alt=""
+      src="https://www.movieartarena.com/imgs/wab.jpg" />
+  <h4>Year: </h4>
+  <p>1991</p>
+  <h4>Score: <span>0</span> </h4>
+  <button class="up-vote">Up Vote</button>
+  <button>Down Vote</button>
+  <button>&times;</button>
+`
+
+movieList.append(bob)

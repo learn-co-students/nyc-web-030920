@@ -1,5 +1,13 @@
 # Browser Events
 
+- `document.getElementById("id")`
+- `document.get ElementsByClassName("class")`
+- `docuement.querySelector("css selector")`
+
+- `node.remove()`
+
+- `image.src = "new picture url"`
+
 3 things that JS allows us to do:
 
 1. Allow user interaction <-- This lecture
@@ -12,7 +20,6 @@
 - [ ] Identify important attributes on the event object and their uses
 - [ ] Identify commonly used events
 - [ ] Synthesize knowledge of DOM manipulation and events to allow user interaction to change DOM
-- [ ] *Bonus* Explain event propagation and identify how this can be used
 
 ### What are some common things users do on a webpage
 
