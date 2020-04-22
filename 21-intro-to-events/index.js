@@ -31,6 +31,7 @@ const movies = [
   }
 ]
 
+
 console.log('My favorite movies')
 
 // add What About Bob? to our movies list
@@ -41,7 +42,7 @@ console.log('My favorite movies')
 
 const movieList = document.querySelector("ul")
 
-let bob = document.createElement("li")
+const bob = document.createElement("li")
 bob.className = "movie"
 
 bob.innerHTML = `
@@ -53,10 +54,55 @@ bob.innerHTML = `
   <h4>Score: <span>0</span> </h4>
   <button class="up-vote">Up Vote</button>
   <button>Down Vote</button>
-  <button id="delete">&times;</button>
+  <button class="delete">&times;</button>
 `
 
 movieList.append(bob)
 
 
 // add a listener to Jaws' delete button that removes the the Jaws li from the DOM
+
+// √get the button from the DOM
+// √add click listener to the button
+// √remove that button's li on click
+
+// const jawsDeleteBtn = document.getElementsByClassName("delete")[0]
+
+// jawsDeleteBtn.addEventListener('click', function(event){
+  
+//   const li = event.target.parentNode
+//   li.remove()
+// })
+
+// √get all the delete buttons
+// √loop through them
+// √add click listener to each button
+// √remove that button's li on click
+
+const deleteButtons = document.querySelectorAll(".delete")
+
+deleteButtons.forEach(function(button){
+  button.addEventListener('click', function(event){
+    const li = event.target.parentNode
+    li.remove()
+  })
+})
+
+// √get all the up-vote buttons
+// √loop through them
+// √add click listeners to each one
+// √increment number in span
+
+const upVoteButtons = document.querySelectorAll(".up-vote")
+
+upVoteButtons.forEach(function(button){
+  button.addEventListener("click", function(event){
+    const parentLi = event.target.parentNode
+    const span = parentLi.querySelector('span')
+
+    let currentScore = parseInt(span.textContent)
+    const newScore = currentScore + 1
+    
+    span.textContent = newScore
+  })
+})
