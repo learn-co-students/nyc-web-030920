@@ -53,7 +53,10 @@ bob.innerHTML = `
   <h4>Score: <span>0</span> </h4>
   <button class="up-vote">Up Vote</button>
   <button>Down Vote</button>
-  <button>&times;</button>
+  <button id="delete">&times;</button>
 `
 
 movieList.append(bob)
+
+
+// add a listener to Jaws' delete button that removes the the Jaws li from the DOM
