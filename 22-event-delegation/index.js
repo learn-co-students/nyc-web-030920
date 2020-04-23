@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", function(event){
   // √create a button
   // √add the button to the DOM
   // √add a click listener to the button that displays a new movie form and removes the button
-  // listen for a submit event
-  // get data out of the form
+  // √listen for a submit event
+  // √get data out of the form
   // add a new movie li to the DOM with that data
 
   const movieButton = document.createElement("button")
@@ -89,8 +89,26 @@ document.addEventListener("DOMContentLoaded", function(event){
     `
 
     document.body.replaceChild(movieForm, movieButton)
+
+    movieForm.addEventListener("submit", function(event){
+      event.preventDefault()
+
+      const form = event.target
+
+      const title = form.title.value
+      const imageUrl = form.imageUrl.value
+      const year = form.year.value
+      const score = 0
+
+      const newMovie = { title,  imageUrl, score, year }
+
+      movieList.append(createMovieLi(newMovie))
+
+      movieForm.reset()
+      
+      document.body.replaceChild(movieButton, movieForm)
+    })
     
-    // pick up this afternoon -> submit event
   })
 
 })
