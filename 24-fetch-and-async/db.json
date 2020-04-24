@@ -62,6 +62,13 @@
       "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/41npElxA48L._AC_.jpg",
       "score": 0,
       "id": 9
-    }
+    },
+    {
+      "title": "Warlock",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/a2/Warlocksands.jpg",
+      "score": 0,
+      "year": "1990",
+      "id": 10
+    } 
   ]
 }

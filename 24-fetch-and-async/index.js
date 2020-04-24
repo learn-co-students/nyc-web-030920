@@ -1,64 +1,25 @@
 console.log('My favorite movies')
-const movies = [
-  {
-    title: 'The Goonies',
-    imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/515DYf99zfL.jpg',
-    year: 1985,
-    score: 0
-  },
-  { 
-    title: 'Free Willy',
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/Free_willy.jpg/220px-Free_willy.jpg',
-    year: 1993,
-    score: 0  
-  },
-  { 
-    title: 'Top Gun',
-    imageUrl: 'https://m.media-amazon.com/images/M/MV5BZjQxYTA3ODItNzgxMy00N2Y2LWJlZGMtMTRlM2JkZjI1ZDhhXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_.jpg',
-    year: 1986,
-    score: 0  
-  },
-  { 
-    title: 'Mean Girls',
-    imageUrl: 'https://img01.mgo-images.com/image/thumbnail?id=1MV270609a1c6c89af5538a6d63cea71ed4&ql=70&sizes=310x465',
-    year: 2004,
-    score: 0  
-  },
-  { 
-    title: 'Parasite',
-    imageUrl: 'https://mymodernmet.com/wp/wp-content/uploads/2020/02/parasite-film-tribute-1.jpg',
-    year: 2019,
-    score: 0  
-  },
-  {
-    title: "What About Bob?",
-    year: 1991,
-    score: 0,
-    imageUrl: "https://www.movieartarena.com/imgs/wab.jpg"
-  },
-  {
-    title: "The Matrix",
-    year: 1999,
-    score: 0,
-    imageUrl: "https://imgc.allpostersimages.com/img/print/u-g-F4S5W20.jpg?w=550&h=550&p=0"
-  },
-  {
-    title: "Jaws",
-    year: 1984,
-    score: 0,
-    imageUrl: "https://resizing.flixster.com/h8e7W7cVaQhuLdSvABDkJk6r5sc=/206x305/v1.bTsxMTE2NjE5OTtqOzE4MzU0OzEyMDA7ODAwOzEyMDA"
-  },
-]
 const movieList = document.querySelector("ul")
+const requestHeaders = {
+  "accept": "application/json",
+  "content-type": "application/json"
+}
 
 
 document.addEventListener("DOMContentLoaded", function(event){
 
-  movies.forEach(function(movieObj){
-    const movieLi = createMovieLi(movieObj)
-    movieList.append(movieLi)
-  })
+  // get movies from database
+  // render each of those movies on the DOM
 
+  fetch("http://localhost:3000/movies")
+  .then(response => response.json())
+  .then(movies => {
+    movies.forEach(function(movieObj){
+      const movieLi = createMovieLi(movieObj)
+      movieList.append(movieLi)
+    })
+  })
+  
   const movieButton = document.createElement("button")
   movieButton.textContent = "Add Movie"
   movieButton.dataset.purpose = "add-movie"
@@ -97,6 +58,16 @@ document.addEventListener("DOMContentLoaded", function(event){
 
       movieList.append(createMovieLi(newMovie))
 
+      // make a post request to the db with our new movie data
+
+      fetch("http://localhost:3000/movies", {
+        method: "POST",
+        headers: requestHeaders,
+        body: JSON.stringify(newMovie)
+      })
+      .then(response => response.json())
+      .then(console.log)
+
       movieForm.reset()
       
       document.body.replaceChild(movieButton, movieForm)
@@ -132,8 +103,12 @@ movieList.addEventListener('click', function(event){
 
     let currentScore = parseInt(span.textContent)
     const newScore = currentScore + 1
-    
+
     span.textContent = newScore
+    
+    // TODO: START HERE ON MONDAY
+    // what would we have to do to update the score in the DB?
+    
   } else if(event.target.dataset.purpose === 'delete'){
     const li = event.target.parentNode
     li.remove()
