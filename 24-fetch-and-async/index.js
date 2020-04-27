@@ -108,7 +108,7 @@ movieList.addEventListener('click', function(event){
     
     // TODO: START HERE ON MONDAY
     // what would we have to do to update the score in the DB?
-    
+
   } else if(event.target.dataset.purpose === 'delete'){
     const li = event.target.parentNode
     li.remove()

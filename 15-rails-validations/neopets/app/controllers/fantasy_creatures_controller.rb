@@ -3,6 +3,11 @@ class FantasyCreaturesController < ApplicationController
 
   def index 
     @fantasy_creatures = FantasyCreature.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @fantasy_creatures, except: [:created_at, :updated_at], include: :posts }
+    end
   end
 
   def show 
