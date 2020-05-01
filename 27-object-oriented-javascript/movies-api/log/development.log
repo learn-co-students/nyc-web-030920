@@ -1084,3 +1084,59 @@ Processing by Api::V1::MoviesController#index as */*
 Completed 200 OK in 19ms (Views: 0.7ms | ActiveRecord: 11.9ms | Allocations: 6740)
 
 
+Started GET "/api/v1/movies" for ::1 at 2020-05-01 10:12:54 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 1642)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-01 10:23:30 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 1642)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-01 10:45:28 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.6ms | Allocations: 1642)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-01 10:46:01 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (9.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 9.2ms | Allocations: 1557)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-01 10:47:15 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1557)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-01 10:52:27 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 1642)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-01 10:59:05 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (1.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 1.3ms | Allocations: 1630)
+
+
+Started GET "/api/v1/movies" for ::1 at 2020-05-01 11:00:22 -0400
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.6ms | Allocations: 1557)
+
+
