@@ -61,25 +61,6 @@ document.addEventListener("DOMContentLoaded", function(event){
 })
 
 
-function createMovieLi(movieObj){
-  const li = document.createElement("li")
-  li.className = "movie"
-  li.dataset.id = movieObj.id
-
-  li.innerHTML = `
-    <h3>${movieObj.title}</h3>
-    <img alt="" src="${movieObj.imageUrl}" />
-    <h4>Year: </h4>
-    <p>${movieObj.year}</p>
-    <h4>Score: <span>${movieObj.score}</span> </h4>
-    <button class="up-vote">Up Vote</button>
-    <button>Down Vote</button>
-    <button data-purpose="delete">&times;</button>
-  `
-  
-  return li
-}
-
 function insertMovie(newMovie){
   fetch(baseUrl, {
     method: "POST",
@@ -93,10 +74,15 @@ function insertMovie(newMovie){
 function getMovies(){
   fetch(baseUrl)
   .then(response => response.json())
-  .then(movies => {
-    movies.forEach(function(movieObj){
-      const movieLi = createMovieLi(movieObj)
-      movieList.append(movieLi)
+  .then(movieData => {
+    const movies = movieData.map(movieObj => {
+      return new Movie(movieObj)
+    })
+
+    console.log(movies)
+    
+    movies.forEach(movie => {
+      movie.render(movieList)
     })
   })
 }

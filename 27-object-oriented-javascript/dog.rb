@@ -1,6 +1,12 @@
 require 'pry'
 
-class Dog
+class Animal
+  def sleep
+    "I'm sleeping now with #{self.favorite_toy}"
+  end
+end
+
+class Dog < Animal
   attr_accessor :name, :favorite_toy
   
   def initialize(name, favorite_toy)
