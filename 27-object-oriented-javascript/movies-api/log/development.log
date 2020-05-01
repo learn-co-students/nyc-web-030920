@@ -1076,3 +1076,11 @@ Processing by Api::V1::MoviesController#index as */*
 Completed 200 OK in 17ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 1457)
 
 
+Started GET "/api/v1/movies" for ::1 at 2020-05-01 09:57:17 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (4.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:3:in `sort_by'
+Completed 200 OK in 19ms (Views: 0.7ms | ActiveRecord: 11.9ms | Allocations: 6740)
+
+

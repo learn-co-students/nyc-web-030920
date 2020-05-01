@@ -120,13 +120,6 @@ movieList.addEventListener('click', function(event){
     let currentScore = parseInt(span.textContent)
     const newScore = currentScore + 1
 
-    // span.textContent = newScore
-    
-    // TODO: START HERE ON MONDAY
-    // what would we have to do to update the score in the DB?
-    // make a patch request to update a given movie record
-    // implement pessimistic rendering
-
     updateMovie(id, newScore)
     .then(movie => {
       span.textContent = movie.score
