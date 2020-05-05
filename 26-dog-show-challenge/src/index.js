@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   tableBody.addEventListener('click', event => {
     if(event.target.className === 'edit'){
       const row = event.target.parentNode.parentNode
-      const cells = row.getElementsByTagName("td")
+      const cells = row.children
 
       const name = cells[0].textContent
       const breed = cells[1].textContent
@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       body: JSON.stringify({ name, breed, sex })
     })
-    .then(response => response.json())
     .then(getDogs)
   })
 
