@@ -40,11 +40,18 @@ After cloning down the project:
 
 ## Deliverables 
 ### Core Deliverables
-- Render all WellnessItems in the Wheel
-- Give WellnessItems default prop for color in case you forget!
-- Render all GuidanceItems with correct information underneath. Hint for stars: `'⭐️'.repeat(5)` will create a string of 5 stars for you.
-- Sort the Guidance Items by number of stars
-- Map out the component hierarchy and which components need which props
+Andrew - Render all WellnessItems in the Wheel
+Joseph - Give WellnessItems default prop for color in case you forget!
+Yueying - Render all GuidanceItems with correct information underneath. Hint for stars: `'⭐️'.repeat(5)` will create a string of 5 stars for you.
+Robert N - Sort the Guidance Items by number of stars
+Uriel - Map out the component hierarchy and which components need which props
+
+App 
+  |- Wheel
+        |= WellnessItem (props: id, title, color, stars )
+        |- Pie (props: )
+  |- Guidance Container
+        |= GuidanceItem (props: factor (obj) )
 
 ### Advanced Deliverables
 If you get through all of the Core Deliverables, try your hand at the Advanced ones. Check out the gif below for how it should look. 
