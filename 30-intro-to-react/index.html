@@ -11,14 +11,86 @@
     <div id="root"></div>
 
     <script type="text/babel">  
+
+    // DO NOT USE THIS NOTATION. IT'S OLD
+    const createGreetingCard = (title, greeting) => {
+      return ( 
+        <div className="greeting-card">
+          <h1>{title}</h1>
+          <h3>{greeting}</h3>
+        </div>
+      )
+    }
+
+    // CLASS SYNTAX !!!
+    // class Card extends React.Component {
+    //   render(){
+    //     console.log(this.props.title)
+
+    //     return (
+    //       <div className="greeting-card">
+    //         <h1>{this.props.title}</h1>
+    //         <h3>{this.props.greeting}{this.props.excited ? '!!!!!!!!' : ''}</h3>
+    //         {this.props.numbers 
+    //           ? this.props.numbers.map((num, index) => {
+    //             return (
+    //               <div key={index}>{num}</div>
+    //             )
+    //           })
+    //           : null
+    //         }
+    //       </div>
+    //     )
+    //   }
+    // }
+
+      // FUNCTIONAL SYNTAX!!!
+    // in Card.js
+    const Card = props => {
+      // debugger;
+      // Suggested: console.log instead
+      const { title, greeting, numbers, excited } = props;
+      // numbers is an array of numbers
+      
+      return (
+        <div className="greeting-card">
+          <h1>{title}</h1>
+          <h3>{greeting}{excited ? '!!!!!!!!' : ''}</h3>
+          {numbers 
+            ? numbers.map((num, index) => {
+              return (
+                <div key={index}>{num}</div>
+              )
+            })
+            : null
+          }
+        </div>
+      )
+    }
+
+    // in INDEX.JS
+    // ReactDOM.render(whatToRender, whereToRender)
     ReactDOM.render(
       <div>
-        <h1>Hello, World!</h1>
-        <h3>Welcome to React</h3>
+        <Card title='Hello, World' greeting='Welcome to React!!!!!!!!!' numbers={[1,2,3]} excited={true}/>
+        <Card title='Hola, Mundo!' greeting='Bienvenido a React' numbers={[1,2,3]}/>
+        <Card title='Hallo, Welt!' greeting='Willkommen a React' numbers={[1,2,3]} excited={true}/>
+        <Card title='Sup' />
+        { /*createGreetingCard('Hello, World', 'Welcome to React!!!!!!!!!') */ }
       </div>
       , 
       document.getElementById('root'))
 
+      // Things to remember:
+      // babel lets us write JSX (HTML looking thing)
+      // className (camel case errythang)
+      // small changes, iterate quickly, test often READ THE ERRORS
+      // need it to eval as JS? CURLYBois
+      // pay attention to what types of props you're passing and using (esp arrays and objects)
+
+
     </script>
   </body>
 </html>
+
+

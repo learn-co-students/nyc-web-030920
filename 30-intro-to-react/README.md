@@ -1,5 +1,6 @@
 Intro to React
 =============================
+TL;DR How do we get from Vanilla JS to React? 
 
 ## SWBATs
 - [ ] Recognize declarative and imperative coding paradigms
@@ -9,11 +10,19 @@ Intro to React
 - [ ] Explain what a React Component actually is in code
 - [ ] Use JSX to build custom components and render them in the browser
 - [ ] See how props are to components as arguments are to functions
-- [ ] LUNCHWORK ==> App ideas 
 
 ## Notes
 
 ### Declarative vs Imperative Programming
+
+Declarative - not concerned with under the hood 
+Gimme a burrito bowl, sofritas and fajitas and corn salsa 
+
+
+Imperative - super detailed
+Put 2 c of rice into rice cooker with lime juice 
+
+
 
 #### Imperative
 ```js
@@ -74,4 +83,6 @@ FINAL FORM: *Dynamic, reusable components using JSX and props*
 
 
 ### Parking Lot 
-Fire Island 
+- Containers as Components... React Best Practices lecture... TODO pre-link the resources 
+- Component v Element  ===> something we or another dev creates that renders a lot of elements (JSX/HTML)
+- and if it was in card.js would it be const = { title, greeting} = this.props ?
