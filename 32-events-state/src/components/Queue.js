@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Queue = props => {
-    let currentSong = null // TODO: how do you figure out what the current song is? 
+    // let { songs, currentSong } = props
+    console.log(props)
+    let currentSong = props.songs.find(song => song.id === props.currentSong) // TODO: how do you figure out what the current song is? 
     
     return (
         <div className="half queue">

@@ -1,5 +1,6 @@
 import React from 'react';
 import Filter from './Filter';
+import SongItem from './SongItem';
 
 const SongList = props => {
     return (
@@ -18,7 +19,15 @@ const SongList = props => {
                         </tr>
                     </thead>
                     <tbody>
-                        {/** TODO: Render a SongItem component per each song here*/}
+                        {props.songs.map(song => <SongItem 
+                                                    key={song.id} 
+                                                    {...song} 
+                                                    updateSong={props.updateSong}
+                                                    chooseSong={props.chooseSong}/>)}
+                        {/* [<SongItem />, <SongItem />, <SongItem />, <SongItem />, <SongItem />,<SongItem />]  effectively same as above sans props*/}
+                        {/**
+                         * song ==> {artist: 'common', title: 'i dont remember", url: "link goes here"}
+                         */}
                     </tbody>
             </table>
         </div>

@@ -6,7 +6,7 @@
       "artist": "Beyonce",
       "url": "https://www.youtube.com/embed/WDZJPJV__bQ",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "artist": "Childish Gambino",
       "url": "https://www.youtube.com/embed/VYOjWnS4cMY",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "artist": "2Pac ft Talent",
       "url": "https://www.youtube.com/embed/eXvBjCO19QY",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "artist": "Bruno Mars",
       "url": "https://www.youtube.com/embed/UqyT8IEBkvY",
       "genre": "Hip Hop",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 5,
@@ -150,7 +150,7 @@
       "artist": "Victoria Monet and Ariana Grande",
       "url": "https://www.youtube.com/embed/TSOzguYgbAM",
       "genre": "Pop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 20,
@@ -158,7 +158,7 @@
       "artist": "Beyoncé (feat. Kendrick Lamar)",
       "url": "https://www.youtube.com/embed/bWtcsj6W_Vw",
       "genre": "Hip Hop",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 21,
@@ -166,6 +166,22 @@
       "artist": "Bad Bunny",
       "url": "https://www.youtube.com/embed/acEOASYioGY",
       "genre": "Hip Hop",
+      "favorite": true
+    },
+    {
+      "id": 22,
+      "title": "Chandelier",
+      "artist": "Allegra Miles",
+      "url": "https://www.youtube.com/embed/Ht51KH_5JAw",
+      "genre": "Pop",
+      "favorite": true
+    },
+    {
+      "id": 23,
+      "title": "The Other Side (From Trolls World Tour)",
+      "artist": "SZA, Justin Timberlake",
+      "url": "https://www.youtube.com/embed/C5RrNaCfUXE",
+      "genre": "Pop",
       "favorite": true
     }
   ]

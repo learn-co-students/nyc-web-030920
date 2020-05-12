@@ -67,6 +67,15 @@ After cloning down the project:
 - `SongItem`: Renders the information for a single song. Props are pre-populated but click handlers are not.
 
 
+                App
+            /       
+      MainContainer  
+    |              |
+    SongList      Queue
+  |      /|\
+Filter   SongItem
+
+
 ### Additional Files
 - `db.json` stores the data for our json-server. Check it out to make sure you know the format of the data.  
 
@@ -74,16 +83,17 @@ After cloning down the project:
 ## Deliverables 
 ### Core Deliverables
 High level, you have to decide where state needs to live, create methods to update state, and pass those methods to where they eventually need to be invoked. Very little guidance is provided purposefully to make you think about where state should live. 
-- Draw out the component hierarchy so you can use it as a guide to plan where state should live and how to pass props.
-- Fetch all songs successfully from the backend when the `Get Songs` button is clicked
-- Render all songs in the `SongList`
-- When `Liked` is clicked on a given song in the `SongList`, its like count should increase. This *DOES NOT* need to persist to the backend. 
-- When the heart is clicked on a given song in the `SongList`, toggle its favorite value. This should persist to the backend so when the page refreshes it is still (not) a favorite. Hint: remember a little thing called a `PATCH` request?
+Kelly - Draw out the component hierarchy so you can use it as a guide to plan where state should live and how to pass props.
+Duncan - Fetch all songs successfully from the backend when the `Get Songs` button is clicked
+Alex Silver - Render all songs in the `SongList`
+Caryn - When `Liked` is clicked on a given song in the `SongList`, its like count should increase. This *DOES NOT* need to persist to the backend. 
+Caryn - When the heart is clicked on a given song in the `SongList`, toggle its favorite value. This should persist to the backend so when the page refreshes it is still (not) a favorite. Hint: remember a little thing called a `PATCH` request?
 
 ### Advanced Deliverables
 If you get through all of the Core Deliverables, try your hand at the Advanced ones. Check out the gif below for how it should look. 
 - When `Play Now`is clicked on a given song in the `SongList`, that song's video should appear in the `Queue`. Hint: you'll need some way to track which song has been clicked, and then have to get all of the details for that song down to the `Queue`. 
 - When `Add to Queue`is clicked on a given song in the `SongList`, that song's title and artist should appear underneath the `Queue`. You should be able to add a song more than once to the queue. Think about how the queue should be represented. 
+    - HINT: an array of id's might be nice.... perhaps on state?
 - Add the ability to delete a song from the `Queue`. Add a button to the `li` for each song. If that songs appears more than once, it should only delete the instance the user clicks to delete. 
 
 ![alt text][advanced_image]
