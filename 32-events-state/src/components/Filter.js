@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Filter = props => {
+    const { onlyFavs, handleFilterChange } = props;
     return (
         <div className="simple-flex-row">
             <label> Genre: 
@@ -11,9 +12,9 @@ const Filter = props => {
                 </select>
             </label>
             <label> Favorites? 
-                <select>
-                    <option>All</option>
-                    <option>Just Favs</option>
+                <select value={onlyFavs} onChange={handleFilterChange}>
+                    <option value="All">All</option>
+                    <option value="Faves">Just Favs</option>
                 </select>
             </label>
         </div>

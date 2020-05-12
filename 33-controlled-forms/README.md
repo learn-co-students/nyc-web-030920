@@ -90,12 +90,12 @@ After cloning down the project:
 ## Deliverables 
 ### Core Deliverables
 While taking on each of the core deliverables, remember the essential elements of creating a controlled form. While you can make a form work in React without it being controlled, this is the right way to do it and something we're checking for. 
-- When the user clicks on `Login` they're shown the `Login` component and the form it contains. Make `Login` a fully controlled form. When it submits, it should redirect the user to the plants view. There's some code to help you with the redirect.
-- On the plants view, when a user types into the search bar, the plants should be filtered. Consider where state should live for this controlled form and how to complete that filter. 
+Johnson - When the user clicks on `Login` they're shown the `Login` component and the form it contains. Make `Login` a fully controlled form. When it submits, it should redirect the user to the plants view. There's some code to help you with the redirect.
+Duncan - On the plants view, when a user types into the search bar, the plants should be filtered. Consider where state should live for this controlled form and how to complete that filter. 
 
 ### Advanced Deliverables
 If you get through all of the Core Deliverables, try your hand at the Advanced ones. 
-- Add behavior so when a user logs in, it replaces the username in `App` state to the submitted username and updates the greeting.
+Joey - Add behavior so when a user logs in, it replaces the username in `App` state to the submitted username and updates the greeting.
 - Uncomment the `SearchForm` component in `HomeView` and look at the additional options it has. Make this search form handle all of its inputs as controlled form elements and have them control what plants are rendered. It's up to you to decide where state should live. It *might not* be most ideal for it to live on `SearchForm`.
 
 
