@@ -20,7 +20,7 @@ Look out for `TODO`s in comments. Use the Core Deliverables listed below to guid
 After cloning down the project:
 - Run `git checkout -b yourname` in your terminal to create your own branch
 - Run `npm install` in your terminal
-- Run `npm start` and a JSON server will spin up a mock back-end API and you can access the data at `http://localhost:6001/plants`. Your react application will also start, on port `6002`. The response should contain an array of objects that are structured as follows:
+- Run `npm start` and your react application will start on port `3000`. The data you need is imported from `data.js` and looks as follows:
 ```
 [{
 "Scientific_Name": "Aphelandra squarrosa",
