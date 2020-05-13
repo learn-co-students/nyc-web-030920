@@ -1,0 +1,216 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "LittleNye9000",
+            "state": "NY"
+        },
+        {
+            "id": 2,
+            "username": "liznotliz",
+            "state": "NY"
+        },
+        {
+            "id": 3,
+            "username": "ragingelephants",
+            "state": "CA"
+        },
+        {
+            "id": 4,
+            "username": "twoandonly",
+            "state": "GA"
+        }
+    ],
+    "subreddits": [
+        {
+            "id": 1,
+            "name": "breanimals",
+            "numUsers": 10000000
+        },
+        {
+            "id": 2,
+            "name": "breadit",
+            "numUsers": 50000
+        },
+        {
+            "id": 3,
+            "name": "BreadStapledToTrees",
+            "numUsers": 2700
+        },
+        {
+            "id": 4,
+            "name": "GarlicBreadMemes",
+            "numUsers": 800547
+        }
+    ],
+    "posts": [
+        {
+            "id": 1,
+            "image": "https://preview.redd.it/2qgphef7f4g31.jpg?width=640&crop=smart&auto=webp&s=9366a115bcb3eccdf125df75a87fbb7fa6d2ac9f",
+            "userId": 1,
+            "subredditId": 1,
+            "title": "The look of betrayal",
+            "likes": 23
+        },
+        {
+            "id": 2,
+            "image": "https://i.redd.it/80upbq1kzor21.jpg",
+            "userId": 1,
+            "subredditId": 1,
+            "title": "Pure Bread Horse",
+            "likes": 18
+        },
+        {
+            "id": 3,
+            "image": "https://4.bp.blogspot.com/-ygx4zf6I1LQ/Tfs6GAT-6fI/AAAAAAAAAIs/ckIMJ5S_CRI/s1600/IMG_9281.JPG",
+            "userId": 3,
+            "subredditId": 1,
+            "title": "The Cutest Bread Turtle You Ever Did See",
+            "likes": 50
+        },
+        {
+            "id": 4,
+            "image": "https://image.spreadshirtmedia.com/image-server/v1/compositions/T812A387PA3140PT17X20Y42D10870759FS7276/views/1,width=650,height=650,appearanceId=387.jpg",
+            "userId": 1,
+            "subredditId": 2,
+            "title": "My Baker Self-Portrait",
+            "likes": 12
+        },
+        {
+            "id": 5,
+            "image": "https://preview.redd.it/0tjeozw6h0y41.jpg?width=640&crop=smart&auto=webp&s=4f5ed736443ca34d077d8238422bae2f0d9805b7",
+            "userId": 1,
+            "subredditId": 4,
+            "title": "Garlic Bread",
+            "likes": 2300
+        },
+        {
+            "id": 6,
+            "image": "https://preview.redd.it/9400bimin1y41.jpg?width=640&crop=smart&auto=webp&s=6226716a15f6f89ffe1691b84031debae508ea61",
+            "userId": 2,
+            "subredditId": 4,
+            "title": "My Garlic bread-grilled cheese. Amazing Combo",
+            "likes": 12
+        },
+        {
+            "id": 7,
+            "image": "https://i.redd.it/hc8dhjg6b0y41.jpg",
+            "userId": 2,
+            "subredditId": 4,
+            "title": "Garlic Bread",
+            "likes": 24
+        },
+        {
+            "id": 8,
+            "image": "https://preview.redd.it/jzdy3ab3lxx41.jpg?width=640&crop=smart&auto=webp&s=45f04b540168ce9299e29559fc01e4a3a1de3876",
+            "userId": 4,
+            "subredditId": 4,
+            "title": "Oh No",
+            "likes": 29
+        },
+        {
+            "id": 9,
+            "image": "https://preview.redd.it/pufj3bgh8wx41.jpg?width=640&crop=smart&auto=webp&s=c247c0101bb47077f71406a70771d30f544c9533",
+            "userId": 1,
+            "subredditId": 4,
+            "title": "Not off to a bad start",
+            "likes": 9
+        },
+        {
+            "id": 10,
+            "image": "https://preview.redd.it/oasiu7dg3ey41.jpg?width=640&crop=smart&auto=webp&s=ae8df1e1c010e3f8a7a59a45f0013d0acd69ca95",
+            "userId": 3,
+            "subredditId": 3,
+            "title": "Buttered sourdough toast staped to my apple tree",
+            "likes": 2600
+        },
+        {
+            "id": 11,
+            "image": "https://preview.redd.it/wopa85u8hey41.jpg?width=640&crop=smart&auto=webp&s=bea34d80a19018c48ac4f3e7aa0a875f2ffedc6f",
+            "userId": 3,
+            "subredditId": 3,
+            "title": "First staple",
+            "likes": 9
+        },
+        {
+            "id": 12,
+            "image": "https://i.redd.it/tglviyb973y41.jpg",
+            "userId": 4,
+            "subredditId": 3,
+            "title": "The tree gets more and more powerful",
+            "likes": 2000
+        },
+        {
+            "id": 13,
+            "image": "https://i.redd.it/mbqtb0c0kyx41.jpg",
+            "userId": 2,
+            "subredditId": 3,
+            "title": "The whole wheat loaf",
+            "likes": 108
+        },
+        {
+            "id": 14,
+            "image": "https://preview.redd.it/wzkpe2hxesx41.jpg?width=640&crop=smart&auto=webp&s=c313821eb0cc51d12312452a7b5c68276651562d",
+            "userId": 1,
+            "subredditId": 3,
+            "title": "Poplar Slice",
+            "likes": 22
+        },
+        {
+            "id": 15,
+            "image": "https://preview.redd.it/5wvne7qg0jy41.jpg?width=640&crop=smart&auto=webp&s=f73c863537eb493cbe1d2b6acea9d78fd18a6177",
+            "userId": 1,
+            "subredditId": 2,
+            "title": "New Ingredients to expierment with",
+            "likes": 0
+        },
+        {
+            "id": 16,
+            "image": "https://preview.redd.it/lzcq35m5fgy41.jpg?width=640&crop=smart&auto=webp&s=23240f1999de2ee2e6251d57a9eaa70ede34e2c8",
+            "userId": 2,
+            "subredditId": 2,
+            "title": "Sourdough loaf #2. Honorable mention to loaf #1 for lessons learned.",
+            "likes": 48
+        },
+        {
+            "id": 17,
+            "image": "https://preview.redd.it/02aqhdmn0jy41.jpg?width=640&crop=smart&auto=webp&s=5ecc6084c79fd44aa48928aa56692e2306ba5443",
+            "userId": 1,
+            "subredditId": 2,
+            "title": "first loaf with my new ingredients from my last post",
+            "likes": 0
+        },
+        {
+            "id": 18,
+            "image": "https://preview.redd.it/w0fzv5yv2jy41.jpg?width=640&crop=smart&auto=webp&s=722220a0fb0d9fb7e766187f071e9e0f0902d8df",
+            "userId": 1,
+            "subredditId": 2,
+            "title": "I finally got an ear and blisters!!",
+            "likes": 0
+        },
+        {
+            "id": 19,
+            "image": "https://preview.redd.it/qad6a9oqmey41.jpg?width=640&crop=smart&auto=webp&s=da6f40f8ae538c1f11d052ddb56ee353918014b8",
+            "userId": 4,
+            "subredditId": 2,
+            "title": "Spicy Cheesy Bread!!",
+            "likes": 79
+        },
+        {
+            "id": 20,
+            "image": "https://preview.redd.it/hqecfz2ztiy41.jpg?width=640&crop=smart&auto=webp&s=c6eef66be0de806a1f444876f705e16d5ecf02ab",
+            "userId": 4,
+            "subredditId": 2,
+            "title": "Bagel Attempt # 1",
+            "likes": 2
+        },
+        {
+            "id": 21,
+            "image": "https://preview.redd.it/vtk5taw75by41.jpg?width=640&crop=smart&auto=webp&s=05d40be871441da6b7d2098f48c6bebb51798f4f",
+            "userId": 3,
+            "subredditId": 2,
+            "title": "Boo makes bread",
+            "likes": 545
+        }
+    ]
+}
