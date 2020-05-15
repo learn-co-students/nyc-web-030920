@@ -19,7 +19,8 @@ const ChannelsContainer = props => {
             <h2>Channels</h2>
             {/** TODO: render all channels here using the helper method above. 
              *         ADVANCED: render into starred OR general below
-             */}
+            */}
+            { props.channels.map(channel => renderChannelRow(channel)) }
             <h3>Starred</h3>
             <h3>General</h3>
             
