@@ -53,3 +53,30 @@ If and only if you have time, you may work on the following:
 3. Anything else!
 
 **Note:** If at the end of the challenge you have achieved all the functionality required but the style looks off, this is okay!
+
+
+
+### Notes
+
+Sticking Points or Questions
+- Deciding on what to put in state and what data type it should be 
+- How to keep track of what is eaten and not since there isn’t an eaten prop in the db 
+- Ternary logic definitely always slows me down a bit 
+- whether we can use useState or change component to a class 
+- after can we go over controlled forms and how to pre-populate the fields  (Pizza)
+
+
+Potential Refactors:
+go faster option - move startIndex to app state 
+go slower option - add a key isEaten to the selected sushi object inside of this.state.sushis
+yes - handleEat conditional nesting so there are better alerts based on why you can't eat it 
+
+
+
+
+Hierarchy
+        App
+    /                 \
+  SushiContainer       Table
+  /|\          |
+  Sushis    MoreBtn
