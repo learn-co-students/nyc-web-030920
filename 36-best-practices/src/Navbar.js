@@ -2,11 +2,11 @@ import React from 'react';
 
 const Navbar = props => {
     return (
-        <div className="simple-flex-row">
+        <form className="simple-flex-row"  onChange={props.handleSearch}>
             <button onClick={props.fetchSongs}>Get Songs</button> 
             <h1>S-not-ify 🐽</h1>
-            <input value={props.search} onChange={props.handleSearch} placeholder="Search by title or artist..."/>
-        </div>
+            <input name="search" value={props.search} placeholder="Search by title or artist..."/>
+        </form>
     )
 }
 

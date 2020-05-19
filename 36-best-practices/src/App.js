@@ -6,15 +6,26 @@ import Navbar from './Navbar';
 let API_ENDPOINT = `http://localhost:6001/songs`
 
 class App extends React.Component {
-  state = {
-    songs: [],
-    currentSong: null, //MINIMUM INFO I NEED will be an id later
-    search: ''
-    // user: null,
-    // color: 'black',
-  }
+  constructor(props){
+    super(props);
 
-  handleSearch = event => this.setState({ search: event.target.value })
+    this.state = {
+      songs: [],
+      currentSong: null,
+      search: ''
+    }
+
+    this.handleSearch = this.handleSearch.bind(this)
+    this.chooseSong = this.chooseSong.bind(this)
+    this.fetchSongs = this.fetchSongs.bind(this)
+  }
+  // state = {
+  //   songs: [],
+  //   currentSong: null, 
+  //   search: ''
+  // }
+
+  handleSearch = event => this.setState({ [event.target.name]: event.target.value })
 
   chooseSong = id => this.setState({ currentSong: id })
 

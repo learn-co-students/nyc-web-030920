@@ -6,13 +6,31 @@ class SongItem extends React.Component {
     }
 
     addLike = () => {
-        this.setState({ likes: this.state.likes + 1 })
+        this.setState(prevState => ({ likes: prevState.likes + 1 })) 
+
+        /**
+         * () => {  this is now a code body and needs to explicitly return }
+         * use parens to implicit return an object
+         * () => ({ name: 'caryn', sign: 'gemini' })
+         */
+
+        if(this.props.favorite){
+            this.setState(prevState => ({ likes: prevState.likes + 2 }))
+        }
+
+        // SET STATE CALLBACK
+        // this.setState({ likes: this.state.likes + 1 }, () => {
+        //     console.log('this is my "then" callback to setState')
+        //     console.log('runs once state finishes updating: ', this.state)
+        // })
+        // console.log('on the line after setstate: ', this.state)
     }
 
     // send a patch request to songs/:id
     // pesimistically update the song so the heart is toggled 
 
     render(){
+        console.log('LIKES: ',this.state.likes)
         return (
             <tr>
                 <td>{this.props.title}</td>

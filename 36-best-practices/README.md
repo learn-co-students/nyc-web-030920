@@ -8,29 +8,31 @@ React Best Practices
 ## Objectives
 
 - Opinions
-  - [x] Code Organization/file structure 
+  - [X] Code Organization/file structure 
         - Folders: Components & Containers, orrrr organized by resource
-  - [x] Presentational vs Container components
+  - [X] Presentational vs Container components
 
 - Optimizations:
   - [X] Functional vs Class Components (required for state & lifecycle methods)
   - [X] Fragments
 
 - Best Practices:
-  - [X] Functional setState
-  - [X] "then" callback for setState
   - [X] Callbacks (avoid useless wrapping)
+  - [X] "then" callback for setState
+  - [X] Functional setState
 
 - JS tricks/bugs often seen in React:
-  - [ ] Arrow functions returning objects () => ({ })
-  - [ ] Destructuring  ====> let { likes, name } = this.props
-  - [ ] Spread (w/ prepend and append) this.setState({ messages: [...this.state.messages, 'newmessage']})
-  - [ ] Objects with the same key/value name ===> let myPerson = {firstName, lastName}
-  - [ ] constructor vs. ES7 instance variables ===> ie state = {}
-  - [ ] dynamic keys ==>  { [variable]: "as_key" } 
+  - [X] Arrow functions returning objects () => ({ })
+  - [ ] Destructuring  ====> `let { likes, name } = this.props`   ===> come to office hours 
+  - [X] Spread (w/ prepend and append) `this.setState({ messages: [...this.state.messages, 'newmessage']})`
+  - [ ] Objects with the same key/value name ===> `let myPerson = {firstName, lastName}` ===> come to office hours 
+  - [X] constructor vs. ES7 instance variables ===> ie `state = {}` vs `constructor()`
+  - [X] dynamic keys ==>  { [variable]: "as_key" } 
 
 - Too Involved for RN
-    - [ ] HOCs Magic magic magic!
+    - [ ] Phasing Out: HOCs!
+    - [ ] New and Shiny: Hooks
+    - [ ] Upcoming: Concurrency Mode 
 
 ## Resources
 
@@ -38,6 +40,8 @@ React Best Practices
 [Pure Components](https://reactjs.org/docs/react-api.html#reactpurecomponent)
 [Redux Code Structure](https://redux.js.org/faq/code-structure)
 [HOCs](https://reactjs.org/docs/higher-order-components.html)
+[Hooks](https://reactjs.org/docs/hooks-intro.html)
+[Concurrency Mode](https://medium.com/swlh/what-is-react-concurrent-mode-46989b5f15da)
 
 ## Lecture Notes
 
