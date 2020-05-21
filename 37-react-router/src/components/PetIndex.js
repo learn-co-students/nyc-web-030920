@@ -13,6 +13,7 @@ class PetIndex extends React.Component {
         fetch(API).then(res => res.json()).then(pets => this.setState({ pets }))
     }
     render(){
+        // console.log('index', this.props)
         return (
             <div className="index-page">
                 <h3>!! All of Our Pets !!</h3>

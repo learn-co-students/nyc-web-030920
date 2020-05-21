@@ -17,11 +17,18 @@ React Router
 ## SPAs
 
 ### Benefits
-
+SPEED - only that first initial load. after that, API requests 
+Super responsive
 
 
 ### Challenges 
-
+- If initial load is long... can be slow up front 
+- No way to use the URL to indicate a specific view 
+- How does a user navigate? And know where they are? 
+- No backwards or fowards 
+- Can't share a specific listing or bookmark/save 
+- No ability to type in a specific URL to go automatically to the page you want 
+- Analytics for SPAs are... trash (inaccurate)
 
 
 ## Dynamic Routing from Rails

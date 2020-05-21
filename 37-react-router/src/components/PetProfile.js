@@ -10,13 +10,18 @@ class PetProfile extends React.Component {
 
     componentDidMount() {
         /** TODO: Make this dynamic! Use the id param of the URL to fetch the correct cat!  */
-        fetch(`${API}/3`)
+
+        // let { allPets } = this.props
+        // allPets.find(pet => pet.id === parseInt(this.props.match.params.id) ) // 5 !== '5'
+
+        fetch(`${API}/${this.props.match.params.id}`)
             .then(res => res.json())
             .then(pet => this.setState({ pet }))
     }
 
     renderPet = () => {
         const { image, name, happiness, description, isAdopted } = this.state.pet;
+        console.log('Profile', this.props)
         return (
             
                 <div className="pet-page">
@@ -28,10 +33,14 @@ class PetProfile extends React.Component {
                         <div className={isAdopted ? '' : 'highlight'}>{isAdopted ? 'No Longer up for Adoption' : 'Up for Adoption!'}</div>
                     </div>
                     <div>
-                        <div>⬅️</div>
-                        <div>➡️</div>
-                        <button>Return to the Cafe Floor</button>
+                        <span>⬅️</span>
+                        <span>➡️</span>
                     </div>
+                    <button onClick={() => this.props.history.push('/pets')}>Go Back</button>
+                    {/** to enable this button
+                     * ... just make it a Link to /pets
+                     * ... use history 
+                     */}
                 </div>
                 
 

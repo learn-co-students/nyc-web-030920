@@ -19,6 +19,7 @@ class Auth extends React.Component {
         isNewUser 
             ? password === confirmation ? alert('created new account!') : alert('try again!')
             : alert(`welcome back, ${username}`)
+        this.props.history.push('/pets')
             /** TODO: when the user logs in, move them to our /pets page  */
     }
 
@@ -45,6 +46,7 @@ class Auth extends React.Component {
     }
     
     render(){
+        // console.log(this.props)
         let { isNewUser } = this.state;
         return (
             <div className="simple-flex-col">

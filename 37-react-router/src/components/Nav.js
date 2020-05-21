@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+// NavLink gives us some tools for active styling 
 
 const Nav = props => {
     /**
@@ -9,12 +10,12 @@ const Nav = props => {
      */
     return (
         <div className="simple-flex-row">
-            <div>🐰🐱🐶🐹☕️🍵</div>
-            <div>Home</div>
-            <div>Pets</div>
+            <Link to="/">🐰🐱🐶🐹☕️🍵</Link>
+            <Link to="/">Home</Link>
+            <Link to="/pets">Pets</Link>
             <div className="simple-flex-row right-corner">
-                <div>Login</div>
-                <div>?</div>
+                <Link to="/login">Login</Link>
+                <Link to="/help">?</Link>
             </div>
         </div>
     )
