@@ -11,7 +11,8 @@ class App extends Component {
   state = {
     sushis: [],
     eatenSushis: [],
-    budget: 105
+    budget: 105,
+    newMoney: ''
   }
 
   componentDidMount(){
@@ -21,6 +22,15 @@ class App extends Component {
       this.setState({ sushis })
     })
   }
+
+  handleChange = e => this.setState({ newMoney: e.target.value })
+
+  handleSubmit = e =>{
+    e.preventDefault()
+    const { budget, newMoney } = this.state;
+    this.setState({ budget: budget + parseInt(newMoney), newMoney: ''})
+  }
+
 
   eatSushi = (id, price, eaten ) => {
     if(price <= this.state.budget && !eaten){  
@@ -43,6 +53,12 @@ class App extends Component {
   render() {
     return (
       <div className="app">
+        <form onSubmit={this.handleSubmit}>
+          <label>New Monies: 
+            <input type="number" onChange={this.handleChange} value={this.state.newMoney} placeholder="Add Money Here..."/>
+          </label>
+          <button type="submit">Submit</button>
+        </form>
         <SushiContainer sushis={this.state.sushis} eatSushi={this.eatSushi} />
         <Table eatenSushis={this.state.eatenSushis} budget={this.state.budget} />
       </div>
