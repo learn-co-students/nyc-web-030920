@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react'
+import { connect } from 'react-redux'
 
 const Sushi = (props) => {
   return (
     <div className="sushi">
       <div className="plate" 
-           onClick={() => props.eatSushi(props.id, props.price, props.eaten)}> 
+          onClick={() => props.eatSushi(props.id, props.price, props.eaten)}> 
         { 
           props.eaten 
           ? null
@@ -18,4 +19,10 @@ const Sushi = (props) => {
   )
 }
 
-export default Sushi
+const mdp = dispatch => {
+  return {
+    eatSushi: (id, price, eaten) => dispatch({ type: 'EAT_SUSHI', payload: {id, price, eaten} })
+  }
+}
+
+export default connect(null, mdp)(Sushi)

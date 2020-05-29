@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux';
 
 const MoreButton = (props) => {
     return <button onClick={props.updateIndex}>
@@ -6,4 +7,10 @@ const MoreButton = (props) => {
           </button>
 }
 
-export default MoreButton
+const mdp = dispatch => {
+  return {
+    updateIndex: () => dispatch({ type: 'UPDATE_INDEX' })
+  }
+}
+
+export default connect(null, mdp)(MoreButton)
