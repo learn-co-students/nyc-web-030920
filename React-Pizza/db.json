@@ -38,9 +38,9 @@
     },
     {
       "id": 7,
-      "topping": "Green Olives",
+      "topping": "Green Eggs & Ham",
       "size": "Small",
-      "vegetarian": true
+      "vegetarian": false
     },
     {
       "id": 8,
@@ -77,6 +77,12 @@
       "topping": "Hawaiian",
       "vegetarian": false,
       "id": 13
+    },
+    {
+      "size": "Large",
+      "topping": "and another one",
+      "vegetarian": true,
+      "id": 14
     }
   ]
 }

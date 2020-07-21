@@ -6,10 +6,15 @@ class App extends Component {
 
   state = {
     pizzas: [],
-    id: null,
-    size: '',
-    topping: '',
-    vegetarian: ''
+    // id: null,
+    // size: '',
+    // topping: '',
+    // vegetarian: '',
+    pizza: { 
+      size: '',
+      topping: '',
+      vegetarian: ''
+    }
   }
 
   componentDidMount(){
@@ -21,18 +26,19 @@ class App extends Component {
   choosePizza = id => {
     let chosenPizza = this.state.pizzas.find(pizza => pizza.id === id)
     let { size, topping, vegetarian } = chosenPizza
-    this.setState({ id, size, topping, vegetarian: vegetarian ? 'Vegetarian' : 'Not Vegetarian'} )
+    this.setState({ pizza: { id, size, topping, vegetarian: vegetarian ? 'Vegetarian' : 'Not Vegetarian' } } )
   }
 
   handleFormChange = e => {
-    console.log('updating...', e.target.name, ' to: ', e.target.value)
-    this.setState({ [e.target.name]: e.target.value })
+    // console.log('updating...', e.target.name, ' to: ', e.target.value)
+    // this.setState({ [e.target.name]: e.target.value })
+    this.setState({ pizza: {...this.state.pizza, [e.target.name]: e.target.value }})
   }
 
 
   handlePizzaPatch = () => {
     // PEEP THE SNAZZY REFACTOR AT THE END OF THIS FILE
-    let { id, topping, vegetarian, size } = this.state;
+    let { id, topping, vegetarian, size } = this.state.pizza;
     let fetchOptions = {
       method: id ? 'PATCH' : 'POST',
       headers: {
@@ -57,19 +63,19 @@ class App extends Component {
             return pizza
           }
         })
-        this.setState({ pizzas: newPizzas, id: null, topping: '', size: '', vegetarian: '' })
+        this.setState({ pizzas: newPizzas, pizza: { id: null, topping: '', size: '', vegetarian: '' } })
       })
     } else {
       fetch(`http://localhost:3000/pizzas`, fetchOptions)
       .then(res => res.json())
       .then(newPizza => {
-        this.setState({ pizzas: [...this.state.pizzas, newPizza], id: null, topping: '', size: '', vegetarian: '' })
+        this.setState({ pizzas: [...this.state.pizzas, newPizza], pizza: { id: null, topping: '', size: '', vegetarian: '' } })
       })
     }
   }
 
   render() {
-    let { pizzas, id, topping, size, vegetarian } = this.state;
+    let { pizzas, pizza } = this.state;
     console.log(this.state)
     return (
       <Fragment>
@@ -77,10 +83,7 @@ class App extends Component {
         <PizzaForm 
           handlePizzaPatch={this.handlePizzaPatch}
           handleFormChange={this.handleFormChange}
-          id={id}
-          topping={topping}
-          size={size}
-          vegetarian={vegetarian}/>
+          pizza={pizza}/>
         <PizzaList 
           pizzas={pizzas} 
           choosePizza={this.choosePizza}/>

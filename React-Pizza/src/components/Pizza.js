@@ -13,3 +13,27 @@ const Pizza = props => {
 }
 
 export default Pizza
+
+
+/**
+ * const choosePizza = id => {  doSomeStuff }
+ * 
+ * onClick={() => choosePizza(id)}
+ * 
+ * 
+ * 
+ * 
+ * 
+ * const choosePizza = (e, id) => {  doSomeStuff }
+ * 
+ * onClick={event => choosePizza(event, id)}
+ * 
+ * 
+ * 
+ * 
+ * 
+ * const choosePizza = event => {  doSomeStuff }
+ * 
+ * onClick={choosePizza}
+ * onClick={event => choosePizza(event)}
+ */
